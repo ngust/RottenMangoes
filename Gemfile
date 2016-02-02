@@ -43,3 +43,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+## Stuff for picture uploads
+gem 'carrierwave'
+gem "mini_magick"
