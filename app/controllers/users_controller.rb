@@ -13,6 +13,8 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+  
   protected
 
   def user_params
