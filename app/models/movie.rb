@@ -1,5 +1,7 @@
 class Movie < ActiveRecord::Base
 
+  mount_uploader :image_path, AvatarUploader
+
   has_many :reviews
   
   validates :title,

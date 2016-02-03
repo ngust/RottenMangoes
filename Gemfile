@@ -47,3 +47,5 @@ end
 ## Stuff for picture uploads
 gem 'carrierwave'
 gem "mini_magick"
+
+gem 'tux'
