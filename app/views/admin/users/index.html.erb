@@ -1,6 +1,17 @@
 This is the admin page
 <% if current_user.admin == true %>
   You are an admin, good to go.
+
+<h1>Rotten Mangoes - Admin Page</h1>
+    <% @users.each do |user| %>
+
+      <h2><%= link_to user.firstname %></h2>
+  
+      <p><%= user.email %></p>
+      <p>Admin Power: <%= user.admin == true ? "Yup" : "Nope" %></p>
+      <hr>
+    <% end %>
+
 <% else %>
   You are not allowed to be here.
 <% end %>
