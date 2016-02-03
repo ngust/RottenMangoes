@@ -1,1 +1,6 @@
 This is the admin page
+<% if current_user.admin == true %>
+  You are an admin, good to go.
+<% else %>
+  You are not allowed to be here.
+<% end %>
