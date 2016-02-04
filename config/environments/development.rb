@@ -31,7 +31,7 @@ RottenMangoes::Application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'gmail.com',
-  user_name:            'nicholasgust@gmail.com',
+  user_name:            'XXXXXXXXXXXXXXX',
   password:             'XXXXXXX',#need password
   authentication:       'plain',
   enable_starttls_auto: true  }
