@@ -1,4 +1,5 @@
 <footer>
+  <p>Return to <a href="/">Main Movies</a></p>
   <small>
     <% if current_user %>
       Signed in as <%= current_user.full_name %> (<%= link_to "Log out", session_path("current"), method: :delete %>)
