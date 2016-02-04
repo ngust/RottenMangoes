@@ -39,8 +39,6 @@ class Movie < ActiveRecord::Base
 
   def self.search(terms, duration)
 
-    #@movies.where("title IN (?) OR director IN (?)", ["Spy", "%Don%"], ["Spy", "%Don%"])
-
     return @movies = Movie.all if terms.empty? && duration.empty?
 
     @movies = Movie.all
@@ -49,7 +47,7 @@ class Movie < ActiveRecord::Base
       @movies = @movies.where("title LIKE ? or director LIKE ?", "%#{term}%", "%#{term}%")
     end
 
-    @movies = Movie.where(@movies.where_values.join(" OR "))
+    #@movies = Movie.where(@movies.where_values.join(" OR "))
 
     if duration
       case duration

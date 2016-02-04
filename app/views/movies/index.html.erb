@@ -8,11 +8,11 @@
       <%= label_tag 'Search Terms' %>
       <%= text_field_tag 'search' %>
       <br/>
-      <%= select_tag "duration", "<option></option><option>Under 90</option><option>Between 90 and 120</option><option>Over 120</option>".html_safe %>
+      <%= select_tag "duration", "<option>Under 90</option><option>Between 90 and 120</option><option>Over 120</option>".html_safe %>
       <%= submit_tag("Search") %>
     <% end %>
     </br></br>
-    
+
     <% @movies.each do |movie| %>
 
       <% if movie.image_path.present? %>
