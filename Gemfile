@@ -49,3 +49,4 @@ gem 'carrierwave'
 gem "mini_magick"
 
 gem 'tux'
+gem 'kaminari'
