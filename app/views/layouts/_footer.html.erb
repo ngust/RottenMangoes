@@ -10,5 +10,8 @@
     <% if current_user && current_user.admin == true %>
       <%= link_to "Admin Page", "/admin" %> 
     <% end %>
+    <% if current_user %>
+      <%= link_to "Profile Page", user_path(current_user.id) %> 
+    <% end %>
   </small>
 </footer>
