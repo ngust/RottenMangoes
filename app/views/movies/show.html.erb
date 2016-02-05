@@ -2,6 +2,8 @@
 
     <%= render partial: "movie", locals: {movie: @movie} %>
 
+    <h4>Make Changes? (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, confirm: "You sure?" %>)</h4>
+
 
     <hr>
 
