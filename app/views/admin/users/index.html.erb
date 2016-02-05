@@ -1,9 +1,8 @@
-This is the admin page
-<% if current_user.admin == true %>
-  You are an admin, good to go.
+
 <h1>Rotten Mangoes - Admin Page</h1>
-<table>
-<thead>
+<div class="col-md-12">
+<table class="table table-responsive table-inverse">
+<thead class="thead-default">
         <tr>
           <th>Firstname</th>
           <th>Lastname</th>
@@ -24,7 +23,4 @@ This is the admin page
       </tbody>
     </table>
 <%= paginate @users %>
-
-<% else %>
-  You are not allowed to be here.
-<% end %>
+</div>
