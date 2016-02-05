@@ -1,4 +1,8 @@
   <h2><%= @user.firstname %>'s Profile</h2>
+  <p>Name: <%= @user.full_name %></p>
+  <p>Email Address: <%= @user.email %></p>
+  <p>Admin Power: <%= @user.admin == true ? "Yup" : "Nope" %></p>
+
 
     <h3>Reviews by <em><%= @user.firstname %></em></h3>
     <% if current_user %>
