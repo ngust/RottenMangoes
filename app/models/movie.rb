@@ -37,31 +37,19 @@ class Movie < ActiveRecord::Base
     end
   end
 
-  def self.search(terms, *duration)
+   scope :search_movies, lambda { |search| where('title LIKE ? OR director LIKE ?', "%#{search}%", "%#{search}%") }
 
-    return @movies = Movie.all if terms.empty? && duration.empty?
-
-    @movies = Movie.all
-
-    terms.split(' ').each do |term|
-      @movies = @movies.where("title LIKE ? or director LIKE ?", "%#{term}%", "%#{term}%")
+  def self.movie_length(time)
+    case time
+    when "short"
+      where('runtime_in_minutes < 90') 
+    when "med"
+      where('runtime_in_minutes >= 90 and runtime_in_minutes < 120')
+    when "long"
+      where('runtime_in_minutes >= 120')
+    else
+      all
     end
-
-    @movies = Movie.where(@movies.where_values.join(" OR "))
-
-    if duration
-      case duration
-      when "Under 90"
-        @movies = @movies.where("runtime_in_minutes < 90")
-      when "Between 90 and 120"
-        @movies = @movies.where("runtime_in_minutes >= 90 AND runtime_in_minutes <= 120")
-      when  "Over 120"
-        @movies = @movies.where("runtime_in_minutes > 120")
-      end
-    end
-
-    @movies
-
   end
 
 end
