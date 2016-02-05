@@ -1,13 +1,5 @@
 class MoviesController < ApplicationController
 
-      # def index
-      #   if params[:query]
-      #     @movies = Movie.where("title LIKE ?", "%#{params[:query]}%")
-      #   else
-      #     @movies = Movie.all
-      #   end
-      # end
-
       def index
           @movies = Movie.search(params[:search] ||= "", params[:duration] ||="")
       end

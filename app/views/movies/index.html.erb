@@ -14,22 +14,5 @@
     </br></br>
 
     <% @movies.each do |movie| %>
-
-      <% if movie.image_path.present? %>
-        <a href="<%= movie.image_path%>"><img src="<%= movie.image_path%>" width="400"></a>
-      <% else %>
-          <a href="<%= movie.poster_image_url%>"><img src="<%= movie.poster_image_url%>" width="400"></a>
-      <%end%>
-
-      <h2><%= link_to movie.title, movie_path(movie) %></h2>
-      <h3>Average Review:
-      <% if movie.reviews.any? %>
-        <%= movie.review_average %>/10 
-      <% else %>
-        No reviews yet.
-      <% end %></h3>
-      <h3><%= formatted_date(movie.release_date) %></h3>
-      <h4>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h4>
-      <p><%= movie.description %></p>
-      <hr>
+      <%= render partial: "movie", locals: {movie: movie} %>
     <% end %>
