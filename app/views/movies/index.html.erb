@@ -1,12 +1,15 @@
-<div class="row">
-  <div class="col-md-2">
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row row-centered">
+        <img class="displayed" src="/assets/Movies_Background.png">
+    </div>
   </div>
-      
-  </div>
-</div>  
+</div>
+       
 <div class="row">
   <div class="col-md-12 center-block" id="movie_main">
-    <% @movies.each do |movie| %>
+    <% @movies.order(:title).each do |movie| %>
       <div class="col-md-4">
         <%= render partial: "movie", locals: {movie: movie} %>
       </div>

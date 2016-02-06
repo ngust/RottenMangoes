@@ -1,6 +1,6 @@
 <div>
   <% if movie.image_path.present? %>
-    <a href="<%= movie.image_path%>"><img src="<%= movie.image_path%>" width="300" height="450"></a>
+    <a href="<%=movie_path(movie)%>"><img src="<%= movie.image_path%>" width="300" height="450"></a>
   <% else %>
       <a href="<%= movie.poster_image_url%>"><img src="<%= movie.poster_image_url%>" width="300" height="450"></a>
   <%end%>

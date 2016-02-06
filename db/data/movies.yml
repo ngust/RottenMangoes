@@ -1,0 +1,30 @@
+"Heat":
+  director: "Michael Mann"
+  runtime_in_minutes: "170"
+  description: "A group of professional bank robbers start to feel the heat from police when they unknowingly leave a clue at their latest heist"
+  poster_image_url: "http://3.bp.blogspot.com/-911N4UVEXO4/ULmtxzY4RlI/AAAAAAAACBY/rv0LPwV5KvM/s1600/15.jpg"
+  release_date: "1996-02-02 00:00:00.000000"
+"Face Off":
+  director: "John Woo"
+  runtime_in_minutes: "148"
+  description: "In order to foil an extortion plot, an FBI agent undergoes a face-transplant surgery and assumes the identity and physical appearance of a ruthless terrorist, but the plan turns from bad to worse when the same criminal impersonates the cop."
+  poster_image_url: "http://www.dvdsreleasedates.com/posters/800/F/Face-Off-1997-movie-poster.jpg"
+  release_date: "1997-11-07 00:00:00.000000"
+"The Matrix":
+  director: "Wachowski Brothers"
+  runtime_in_minutes: "106"
+  description: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers."
+  poster_image_url: "https://galontrip.files.wordpress.com/2013/04/the_matrix_1999_poster.jpg"
+  release_date: "1999-07-11 00:00:00.000000"
+"Full Metal Jacket":
+  director: "Stanley Kubrick"
+  runtime_in_minutes: "116"
+  description: "A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue."
+  poster_image_url: "http://moviewallpaperpics.com/wp-content/uploads/2015/04/Full-Metal-Jacket-3.jpg"
+  release_date: "1987-09-11 00:00:00.000000"
+"The Usual Suspects":
+  director: "Bryan Singer"
+  runtime_in_minutes: "106"
+  description: "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which begin when five criminals meet at a seemingly random police lineup."
+  poster_image_url: "https://fanart.tv/fanart/movies/629/movieposter/the-usual-suspects-5261e6a94d1ce.jpg"
+  release_date: "1995-08-25 00:00:00.000000"

@@ -1,0 +1,50 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><img id="logo" src="/assets/Movies_Background_nav.png" height="35"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <form class="navbar-form navbar-left" style= "margin-top: 15px" role="search">
+         <%= form_tag(movies_path, method: :get, class: "search_form" ) do %>
+        <div class="form-group">
+        <%= text_field_tag :search_term, nil, class: "form-control"%>
+        </div>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= select_tag :runtime_in_minutes, options_for_select(
+          [
+            ['Under 90 minutes', 'short'],
+            ['Between 90 and 120 minutes', 'med'],
+            ['Over 120 minutes', 'long']
+          ]), class: "form-control", style: "width: 100px", :prompt => "Length"  %>
+        <% end %>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <% if current_user && current_user.admin == true %>
+            <%= link_to "Admin", "/admin" %> 
+          <% end %>
+        </li>
+        <li>
+          <% if current_user %>
+            <%= link_to "Profile", user_path(current_user.id) %> 
+          <% end %>
+        </li>
+          <% if current_user %>
+            <li>
+              <%= link_to current_user.full_name, user_path(current_user.id) %>
+            </li>
+            <li>
+              <%= link_to "Log out", session_path("current"), method: :delete %>
+            </li>  
+          <% else %>
+              <%= link_to "Log In", new_session_path %> | <%= link_to "Sign Up", new_user_path %>
+          <% end %>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

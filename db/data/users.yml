@@ -1,3 +1,23 @@
+"Andy":
+  email: "andy@test.com"
+  password: "password"
+  lastname: "Yao"
+  password_confirmation: "password"
+"Billy":
+  email: "billy@test.com"
+  password: "password"
+  lastname: "Ray Cyrus"
+  password_confirmation: "password"
+"Daffy":
+  email: "duck@test.com"
+  password: "password"
+  lastname: "Duck"
+  password_confirmation: "password"
+"Nick":
+  email: "nick@test.com"
+  password: "password"
+  lastname: "Gust"
+  password_confirmation: "password"
 "User2":
   email: "User2@test.com"
   password: "password"

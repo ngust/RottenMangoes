@@ -17,8 +17,3 @@ body {
 .navbar-nav li a {
  line-height: 35px;
 }
-
-.displayed {
-    display: block;
-    margin-left: auto;
-    margin-right: auto }

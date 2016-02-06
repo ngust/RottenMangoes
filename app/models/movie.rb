@@ -28,6 +28,10 @@ class Movie < ActiveRecord::Base
     reviews.sum(:rating_out_of_ten)/reviews.size
   end
 
+  def self.review_average
+    reviews.sum(:rating_out_of_ten)/reviews.size
+  end
+
 
   protected
 
