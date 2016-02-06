@@ -1,36 +1,11 @@
 <div class="row">
   <div class="col-md-2">
   </div>
-
-  <div class="col-md-10 col-md-offset-3">
-    <h1>Rotten Mangoes</h1>
-        <%= link_to "Submit a movie!", new_movie_path %>
-        <hr>
-
-        <p>Search For Movies</p>
-         
-        <%= form_tag(movies_path, method: :get, class: "search_form") do %>
-      <div>
-        <%= label_tag :search_term %><br/>
-        <%= text_field_tag :search_term %>
-      </div>
-      <div>
-        <%= select_tag :runtime_in_minutes, options_for_select(
-          [
-            ['', ''],
-            ['Under 90 minutes', 'short'],
-            ['Between 90 and 120 minutes', 'med'],
-            ['Over 120 minutes', 'long']
-          ])%>
-
-          <div><%= submit_tag "Search", class: "btn btn-primary" %></div>
-        <% end %>
-        </br></br>
-      </div>
+      
   </div>
 </div>  
 <div class="row">
-  <div class="col-md-12 center-block">
+  <div class="col-md-12 center-block" id="movie_main">
     <% @movies.each do |movie| %>
       <div class="col-md-4">
         <%= render partial: "movie", locals: {movie: movie} %>

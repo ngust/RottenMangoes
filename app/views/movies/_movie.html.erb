@@ -5,13 +5,13 @@
       <a href="<%= movie.poster_image_url%>"><img src="<%= movie.poster_image_url%>" width="300" height="450"></a>
   <%end%>
 </div>
-<h3><%= link_to movie.title, movie_path(movie) %></h3>
+<h4><%= link_to movie.title, movie_path(movie) %></h4>
 <h4>Average Review:
 <% if movie.reviews.any? %>
   <%= movie.review_average %>/10 
 <% else %>
   No reviews yet.
 <% end %></h4>
-<h4><%= formatted_date(movie.release_date) %></h4>
+<h4>Reased: <%= formatted_date(movie.release_date) %></h4>
 <h5>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h5>
-<p><%= movie.description %></p>
+<p><%= truncate(movie.description, :length => 100, :separator => ' ...') %></p>
