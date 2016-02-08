@@ -2,7 +2,7 @@
   <% if movie.image_path.present? %>
     <a href="<%=movie_path(movie)%>"><img id="title" src="<%= movie.image_path%>" width="300" height="450"></a>
   <% else %>
-      <a href="<%= movie.poster_image_url%>"><img id="title" src="<%= movie.poster_image_url%>" width="300" height="450"></a>
+      <a href="<%=movie_path(movie)%>"><img id="title" src="<%= movie.poster_image_url%>" width="300" height="450"></a>
   <%end%>
 </div>
 <h4><%= link_to movie.title, movie_path(movie) %></h4>

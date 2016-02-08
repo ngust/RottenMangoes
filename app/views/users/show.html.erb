@@ -1,17 +1,45 @@
-  <h2><%= @user.firstname %>'s Profile</h2>
-  <p>Name: <%= @user.full_name %></p>
-  <p>Email Address: <%= @user.email %></p>
-  <p>Admin Power: <%= @user.admin == true ? "Yup" : "Nope" %></p>
-
-
-    <h3>Reviews by <em><%= @user.firstname %></em></h3>
-    <% if current_user %>
-      <% @user.reviews.each do |review| %>
-        <p><%= review.text %></p>
-        <p><%= review.rating_out_of_ten %>/10</p>
-         <small>- <%= review.user.full_name %></small><br/>
+  <div class="container">
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row row-centered">
+        <div class="col-md-4">
+          <h2><%= @user.firstname %>'s Profile</h2>
+          <p>Name: <%= @user.full_name %></p>
+          <p>Email Address: <%= @user.email %></p>
+          <p>Admin Power: <%= @user.admin == true ? "Yup" : "Nope" %></p>
+        </div>
+        <div class="col-md-4 pull-right">
+        <%= image_tag "NicholasGust.jpg", class: "profile_pic" %>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 center-block" id="profile_main">
+            <h2>Reviews by <em><%= @user.firstname %></em></h2>
+            <hr>
+            <% if current_user %>
+              <% @user.reviews.each do |review| %>
+          <div class="col-md-4">
+                <% mov_title = Movie.find_by(id: review.movie_id) %>
+                <h3><%= mov_title.title %></h3>
+                <p><%= review.text %></p>
+                <p><%= review.rating_out_of_ten %>/10</p>
+                 <small>- <%= review.user.full_name %></small><br/>
+               </div>
+                <% end %>
+    
+          <% else %>
+        <div class="col-md-4">
+          <p>Please <%= link_to "log in", new_session_path %> to see reviews and add your own.</p> 
+        </div>
+      </div>
       <% end %>
-      <p><%= link_to "Write a review!", new_movie_review_path(@movie) %></p>
-    <% else %>
-      <p>Please <%= link_to "log in", new_session_path %> to see reviews and add your own.</p> 
-    <% end %>
+    </div>
+      <div class="row">
+        <div class="col-md-4">
+          <p><a class="btn btn-primary btn-lg" href="new_movie_review_path(@movie)" role="button">Write a review!</a></p>
+        </div>
+      </div>
+  </div>
+</div>
