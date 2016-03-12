@@ -1,3 +1,48 @@
+"Big Lebowski":
+  director: "Coen Bros"
+  runtime_in_minutes: "180"
+  description: '"The Dude" Lebowski, mistaken for a millionaire Lebowski, seeks restitution for his ruined rug and enlists his bowling buddies to help get it.'
+  poster_image_url: "http://moviefiles.alphacoders.com/164/poster-164.jpg"
+  release_date: "1997-07-07 00:00:00.000000"
+  image_path: "bigLebowski.jpg"
+
+"Fight Club":
+  director: "David Fincher"
+  runtime_in_minutes: "139"
+  description: "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soap maker, forming an underground fight club that evolves into something much, much more."
+  poster_image_url: "http://www.flore-maquin.com/wp-content/uploads/Fight_club_RVB_72.jpg"
+  release_date: "1999-11-12 00:00:00.000000"
+"Fear and Loathing in Las Vegas":
+  director: "Terry Gilliam"
+  runtime_in_minutes: "118"
+  description: "An oddball journalist and his psychopathic lawyer travel to Las Vegas for a series of psychedelic escapades."
+  poster_image_url: "http://im.shopdeca.com/media/catalog/product/cache/1/image/784x1052/9df78eab33525d08d6e5fb8d27136e95/m/o/movie-poster-shop-fear-and-loathing-in-las-vegas-_1998_-68.6x101.6-cm.jpg"
+  release_date: "1998-11-13 00:00:00.000000"
+  image_path: "FearAndLoathingInLasVegas-01.jpg"
+"The Life Aquatic":
+  director: "Wes Anderson"
+  runtime_in_minutes: "179"
+  description: "With a plan to exact revenge on a mythical shark that killed his partner, oceanographer Steve Zissou rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son."
+  poster_image_url: "http://41.media.tumblr.com/tumblr_maev1cPf6e1qe2w1uo1_1280.jpg"
+  release_date: "2005-02-25 00:00:00.000000"
+"The Goonies":
+  director: "Richard Donner"
+  runtime_in_minutes: "89"
+  description: "In order to save their home from foreclosure, a group of misfits set out to find a pirate''s ancient treasure."
+  poster_image_url: "http://41.media.tumblr.com/tumblr_m0t8ioWNVo1rn4pyoo1_1280.jpg"
+  release_date: "1985-11-29 00:00:00.000000"
+"Super Troopers":
+  director: "Jay Chandrasekhar"
+  runtime_in_minutes: "100"
+  description: "Five Vermont state troopers, avid pranksters with a knack for screwing up, try to save their jobs and out-do the local police department by solving a crime."
+  poster_image_url: "http://i.jeded.com/i/super-troopers-2001.16707.jpg"
+  release_date: "2002-11-15 00:00:00.000000"
+"Team America: World Police":
+  director: "Trey Parker"
+  runtime_in_minutes: "98"
+  description: "Popular Broadway actor Gary Johnston is recruited by the elite counter-terrorism organization Team America: World Police. As the world begins to crumble around him, he must battle with terrorists, celebrities and falling in love."
+  poster_image_url: "http://ayay.co.uk/movies/poster/comedy/team-america-world-police-3.jpg"
+  release_date: "2004-01-14 00:00:00.000000"
 "Heat":
   director: "Michael Mann"
   runtime_in_minutes: "170"
