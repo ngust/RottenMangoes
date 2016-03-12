@@ -1,22 +1,39 @@
 <%= link_to "Back to all movies", movies_path %><br/>
-
-    <%= render partial: "movie", locals: {movie: @movie} %>
-
-    <% if current_user %>
-    <h4>Make Changes? (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, confirm: "You sure?" %>)</h4>
-    <% end %>
-
-    <hr>
-
-    <h3>Reviews of <em><%= @movie.title %></em></h3>
-    <% if current_user %>
-      <% @movie.reviews.each do |review| %>
-        <p><%= review.text %></p>
-        <p><%= review.rating_out_of_ten %>/10</p>
-         <small>- <%= review.user.full_name %></small><br/>
-         <%= link_to "Profile Page", user_path(review.user.id) %>
+  <div class="container">
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row row-centered">
+          <div class="col-md-4">
+            <%= render partial: "movie", locals: {movie: @movie} %>
+            <% if current_user %>
+            <h4>Make Changes? (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, confirm: "You sure?" %>)</h4>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+          <hr>
+    <div class="row">
+      <div class="col-md-12 center-block">
+          <h3>Reviews of <em><%= @movie.title %></em></h3>
+          <% if current_user %>
+            <% @movie.reviews.each do |review| %>
+            <div class="col-md-4">
+              <p><%= review.text %></p>
+              <p><%= review.rating_out_of_ten %>/10</p>
+               <small>- <%= review.user.full_name %></small><br/>
+               <%= link_to "Profile Page", user_path(review.user.id) %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4" style="padding: 15px">
+            <p><a class="btn btn-primary btn-lg" href="new_movie_review_path(@movie)" role="button">Write a review!</a></p>
+      <% else %>
+            <p>Please <%= link_to "log in", new_session_path %> to see reviews and add your own.</p>
+          </div>
+        </div> 
       <% end %>
-      <p><%= link_to "Write a review!", new_movie_review_path(@movie) %></p>
-    <% else %>
-      <p>Please <%= link_to "log in", new_session_path %> to see reviews and add your own.</p> 
-    <% end %>
+  </div>    
+</div>  
