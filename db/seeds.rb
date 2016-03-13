@@ -34,3 +34,14 @@ movies_yml.each_pair do |name, info|
    release_date: info["release_date"]
  )
 end
+
+reviews_yml = convert_to_yml('db/data/reviews.yml')
+
+reviews_yml.each_pair do |name, info|
+ Review.create!(
+   text: name,
+   user_id: info["user_id"],
+   movie_id: info["movie_id"],
+   rating_out_of_ten: info["rating_out_of_ten"]
+ )
+end

@@ -1,0 +1,28 @@
+'This movie is the best.  Over the line!!!':
+  user_id: 1,
+  movie_id: 1,
+  rating_out_of_ten: 10,
+'Goonies is the shit!  Crazy goblin guy and kids on a cave adventure.  All kids of fun.':
+  user_id: 4,
+  movie_id: 5,
+  rating_out_of_ten: 8,
+'Crazy movie.  Excellent social commentary.  Wild plot twists and endless quotes.':
+  user_id: 4,
+  movie_id: 2,
+  rating_out_of_ten: 10,
+'The trip of a lifetime ;).':
+  user_id: 4,
+  movie_id: 3,
+  rating_out_of_ten: 10,
+'Steve Zissou for the win!':
+  user_id: 4,
+  movie_id: 4,
+  rating_out_of_ten: 10,
+'Face Off is at its heart a cheesy action movie.  Getting past that it is an entertaining movie that is worth every second.  Some baller quotes and Nicolas Cage behaving as insane as ever.':
+  user_id: 4,
+  movie_id: 9,
+  rating_out_of_ten: 7,
+'Heat is not a cheesy action movie.  The story is very well developed with the heist taking center stage.  The respect that Pacino and DeNiro''s characters have for eachother is admirable.':
+  user_id: 4,
+  movie_id: 8,
+  rating_out_of_ten: 9
